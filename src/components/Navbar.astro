@@ -1,0 +1,41 @@
+---
+const menu = [
+    { name: "Home", href: "#" },
+    { name: "Explore", href: "#" },
+    { name: "Activity", href: "#" },
+    { name: "Artist", href: "#" },
+    { name: "News", href: "#" },
+];
+---
+
+<header class="mt-3 mx-11">
+    <nav class="flex justify-between items-center">
+        <!-- Logo -->
+        <a href="">
+            <img src="/images/NebulaNFT.webp" alt="" class="h-5 w-auto" />
+        </a>
+
+        <!-- Menu -->
+        <ul class="flex gap-12">
+            {
+                menu.map((item) => (
+                    <li>
+                        <a href={item.href} class="text-white text-xl">
+                            {item.name}
+                        </a>
+                    </li>
+                ))
+            }
+        </ul>
+
+        <!-- Buttons -->
+        <div class="text-white flex gap-9 items-center">
+            <a href="#" class="text-xl">LogIn</a>
+            <a
+                href="#"
+                class="text-lg font-semibold py-2 px-6 rounded-lg bg-blue shadow-blueGlow"
+                >Get Started</a
+            >
+        </div>
+    </nav>
+</header>

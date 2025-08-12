@@ -1,0 +1,35 @@
+---
+import "../styles/global.css";
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Astro</title>
+    </head>
+    <body
+        class="bg-darkBlue h-screen relative overflow-x-hidden font-montserrat"
+    >
+        <!-- Wrapper untuk slot -->
+        <div class="relative z-10">
+            <slot />
+        </div>
+
+        <div
+            class="absolute w-[394px] h-[496px] bg-backgoundGradient rounded-full top-12 -left-16 -rotate-45 blur-[250px] z-0"
+        >
+        </div>
+        <div
+            class="absolute w-[394px] h-[496px] bg-backgoundGradient rounded-full top-48 -right-10 -rotate-45 blur-[250px] z-0"
+        >
+        </div>
+        <img
+            src="/images/asset.webp"
+            alt="asset"
+            class="top-[650px] absolute"
+        />
+    </body>
+</html>

@@ -1,0 +1,27 @@
+---
+const { imgSrc, title, creator, currentBid } = Astro.props;
+---
+
+<div class="bg-red-100">
+    <div class="">
+        <div class="">
+            <!-- Image -->
+            <img src={imgSrc} alt={title} class="" />
+
+            <!-- Content -->
+            <div class="">
+                <h3>{title}</h3>
+                <p>By {creator}</p>
+
+                <!-- Bid Information -->
+                <div class="">
+                    <div>
+                        <p>Current Bid</p>
+                        <p>{currentBid}ETH</p>
+                    </div>
+                    <button>Place Bid</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
