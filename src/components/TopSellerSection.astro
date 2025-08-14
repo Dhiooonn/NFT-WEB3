@@ -1,25 +1,33 @@
 ---
-const { imgSrc, name, eth } = Astro.props;
+import TopSellerAnimation from "./animation/TopSellerAnimation.tsx";
+import SellerCard from "./SellerCard.astro";
+
+const sellers = [
+    { imgSrc: "/images/seller2.webp", name: "Apex Aura", eth: "23.1" },
+    { imgSrc: "/images/seller3.webp", name: "Apex Aura", eth: "23.1" },
+    { imgSrc: "/images/seller4.webp", name: "Apex Aura", eth: "23.1" },
+    { imgSrc: "/images/seller5.webp", name: "Apex Aura", eth: "23.1" },
+    { imgSrc: "/images/seller6.webp", name: "Apex Aura", eth: "23.1" },
+];
 ---
 
-<section class="mt-28">
+<section class="mt-28 flex flex-col gap-12">
     <h1 class="text-white font-bold text-6xl text-center">Top Seller</h1>
-    <div class="seller">
-        <div
-            class="flex items-center gap-5 bg-red-200 w-[312px] h-auto rounded-[20px] p-[10px]"
-        >
-            <!-- img -->
-            <img
-                src={imgSrc}
-                alt={name}
-                class="w-[94px] h-[94px] rounded-xl bg-white"
-            />
 
-            <!-- Name Seller -->
-            <div class="flex flex-col">
-                <h3 class="font-semibold text-xl">{name}</h3>
-                <p class="font-normal text-sm">{eth}</p>
-            </div>
-        </div>
+    <div class="flex flex-col gap-6 overflow-hidden">
+        {
+            Array.from({ length: 3 }).map((_, rowIndex) => (
+                <div class="topSellerRow flex gap-6">
+                    {sellers.map((seller) => (
+                        <SellerCard {...seller} />
+                    ))}
+                    {sellers.map((seller) => (
+                        <SellerCard {...seller} />
+                    ))}
+                </div>
+            ))
+        }
     </div>
+
+    <TopSellerAnimation client:load />
 </section>

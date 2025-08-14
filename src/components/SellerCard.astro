@@ -1,0 +1,22 @@
+---
+const { imgSrc, name, eth } = Astro.props;
+---
+
+<section>
+    <div
+        class="flex items-center gap-5 bg-backgroundCardSeller border-2 border-borderColor w-[312px] h-auto rounded-[20px] p-[10px] text-white"
+    >
+        <!-- img -->
+        <img
+            src={imgSrc}
+            alt={name}
+            class="w-[94px] h-[94px] rounded-xl bg-white"
+        />
+
+        <!-- Name Seller -->
+        <div class="flex flex-col">
+            <h3 class="font-semibold text-xl">{name}</h3>
+            <p class="font-normal text-sm">{eth} ETH</p>
+        </div>
+    </div>
+</section>
