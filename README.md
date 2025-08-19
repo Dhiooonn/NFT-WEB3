@@ -1,4 +1,4 @@
-# Astro Starter Kit: Minimal
+<!-- # Astro Starter Kit: Minimal
 
 ```sh
 npm create astro@latest -- --template minimal
@@ -40,4 +40,93 @@ All commands are run from the root of the project, from a terminal:
 
 ## 👀 Want to learn more?
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat). -->
+
+
+# Astro NFT Landing Page
+Proyek ini adalah landing page bertema NFT yang dibuat menggunakan Astro dengan struktur komponen modular dan section yang dapat diakses melalui navigasi di navbar.
+
+# Fitur
+- **Desain Responsif** – Tampilan optimal di desktop, tablet, dan mobile.
+- **Navigasi Smooth Scroll** – Klik menu di navbar langsung menuju ke section yang dituju.
+- **Modular Components** – Setiap section dipisahkan dalam file .astro untuk memudahkan pengelolaan.
+- **Optimasi Performa** – Menggunakan kemampuan Astro untuk meminimalkan beban render.
+- **Asset Lokal** – Gambar dan aset disimpan di folder /public.
+
+# Teknologi yang Digunakan
+- **Astro – Static** site generator modern
+- **Tailwind CSS** – Styling cepat dan konsisten
+- **TypeScript** – Menjaga kode lebih aman
+- **HTML5 & CSS3**
+
+# Struktur Folder
+```
+public/                # Asset publik (gambar, icon, dll)
+ └─ images/
+     ├─ nft/
+     ├─ artists/
+     └─ logos/
+
+src/
+ ├─ components/        # Komponen kecil & reusable
+ │   ├─ cards/         # Komponen kartu
+ │   │   ├─ NFTCard.astro
+ │   │   ├─ SellerCard.astro
+ │   │   └─ ArtistCardNFT.astro
+ │   ├─ ui/            # Komponen UI umum
+ │   │   ├─ Button.astro
+ │   │   ├─ Navbar.astro
+ │   │   └─ Footer.astro
+ │   └─ animation/     # Komponen animasi khusus
+ │       ├─ TopSellerAnimation.tsx
+ │       └─ ScrollHorizontal.ts
+
+ ├─ sections/          # Bagian halaman (Hero, Explore, News, dll)
+ │   ├─ HeroSection.astro
+ │   ├─ ExploreSection.astro
+ │   ├─ NewsSection.astro
+ │   ├─ TopSellerSection.astro
+ │   └─ ArtistSection.astro
+
+ ├─ layouts/           # Template layout
+ │   └─ MainLayout.astro
+
+ ├─ data/              # Data dummy / static JSON
+ │   ├─ nftData.ts
+ │   ├─ sellerData.ts
+ │   └─ categories.ts
+
+ ├─ pages/             # Halaman utama
+ │   ├─ index.astro
+ │   ├─ about.astro
+ │   └─ contact.astro
+
+ ├─ styles/            # CSS / Tailwind config
+ │   ├─ global.css
+ │   └─ variables.css
+
+astro.config.mjs
+package-lock.json
+package.json
+postcss.config.js
+README.md
+tailwind.config.js
+tsconfig.json
+```
+
+# cara Menjalankan
+**1. Clone Repository**
+```git clone https://github.com/username/astro-nft-landing.git
+cd astro-nft-landing```
+
+**2. Install Dependencies**
+```npm install```
+
+**3. Jalankan di Development**
+```npm run dev```
+
+**4. Build untuk Production**
+```npm run build```
+
+**5. Preview Build**
+```npm run preview```

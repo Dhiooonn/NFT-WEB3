@@ -1,12 +1,12 @@
 ---
-import HeroSection from "../components/HeroSection.astro";
-import ExploreSection from "../components/ExploreSection.astro";
-import Navbar from "../components/Navbar.astro";
+import HeroSection from "../sections/HeroSection.astro";
+import ExploreSection from "../sections/ExploreSection.astro";
+import Navbar from "../components/ui/Navbar.astro";
 import MainLayout from "../layouts/MainLayout.astro";
-import TopSellerSection from "../components/TopSellerSection.astro";
-import ArtistSection from "../components/ArtistSection.astro";
-import NewsSection from "../components/NewsSection.astro";
-import FooterSection from "../components/FooterSection.astro";
+import TopSellerSection from "../sections/TopSellerSection.astro";
+import ArtistSection from "../sections/ArtistSection.astro";
+import NewsSection from "../sections/NewsSection.astro";
+import Footer from "../components/ui/Footer.astro";
 ---
 
 <MainLayout>
@@ -16,5 +16,5 @@ import FooterSection from "../components/FooterSection.astro";
 	<TopSellerSection />
 	<ArtistSection />
 	<NewsSection />
-	<FooterSection />
+	<Footer />
 </MainLayout>

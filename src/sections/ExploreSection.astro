@@ -1,0 +1,33 @@
+---
+import NFTcard from "../components/cards/NFTcard.astro";
+import NFTList from "../data/NFTList"; // import data
+---
+
+<section id="explore" class="mt-[820px] mb-64">
+    <div class="information text-white font-bold text-6xl text-center">
+        <h1>Top Picks This Week</h1>
+        <h1>Your Next Big NFT Awaits</h1>
+    </div>
+
+    <!-- Mapping data -->
+    <div
+        id="nftContainer"
+        class="flex gap-5 mt-12 overflow-x-auto scrollbar-hide snap-x snap-mandatory scroll-smooth"
+    >
+        {
+            NFTList.map((nft) => (
+                <div class="nft-items">
+                    <NFTcard
+                        imgSrc={nft.imgSrc}
+                        title={nft.title}
+                        creator={nft.creator}
+                        currentBid={nft.currentBid}
+                    />
+                </div>
+            ))
+        }
+    </div>
+
+    <!-- Load file TS hanya di client -->
+    <script type="module" src="/src/scripts/ScrollHorizontal.ts"></script>
+</section>

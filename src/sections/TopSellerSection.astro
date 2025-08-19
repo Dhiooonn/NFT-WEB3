@@ -1,17 +1,10 @@
 ---
-import TopSellerAnimation from "./animation/TopSellerAnimation.tsx";
-import SellerCard from "./SellerCard.astro";
-
-const sellers = [
-    { imgSrc: "/images/seller2.webp", name: "Apex Aura", eth: "23.1" },
-    { imgSrc: "/images/seller3.webp", name: "Apex Aura", eth: "23.1" },
-    { imgSrc: "/images/seller4.webp", name: "Apex Aura", eth: "23.1" },
-    { imgSrc: "/images/seller5.webp", name: "Apex Aura", eth: "23.1" },
-    { imgSrc: "/images/seller6.webp", name: "Apex Aura", eth: "23.1" },
-];
+import TopSellerAnimation from "../components/animation/TopSellerAnimation";
+import SellerCard from "../components/cards/SellerCard.astro";
+import { sellers } from "../data/Sellers.ts";
 ---
 
-<section class="mt-28 flex flex-col gap-12">
+<section id="activity" class="mt-28 flex flex-col gap-12">
     <h1 class="text-white font-bold text-6xl text-center">Top Seller</h1>
 
     <div class="flex flex-col gap-6 overflow-hidden">

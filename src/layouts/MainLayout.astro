@@ -11,56 +11,61 @@ import "../styles/global.css";
         <title>Astro</title>
     </head>
     <body
-        class="bg-darkBlue h-screen relative overflow-x-hidden font-montserrat"
+        class="bg-darkBlue w-full min-h-screen relative overflow-x-hidden font-montserrat pb-7"
     >
         <!-- Wrapper untuk slot -->
         <div class="relative z-10">
             <slot />
         </div>
 
-        <div
-            class="absolute w-[394px] h-[496px] bg-backgoundGradient rounded-full top-12 -left-16 -rotate-45 blur-[250px] z-0"
-        >
-        </div>
-        <div
-            class="absolute w-[394px] h-[496px] bg-backgoundGradient rounded-full top-48 -right-10 -rotate-45 blur-[250px] z-0"
-        >
-        </div>
-        <div
-            class="absolute w-[887px] h-[716px] bg-backgoundGradient rounded-full top-[1526px] right-1/4 opacity-50 blur-[581px] z-0"
-        >
-        </div>
-        <div
-            class="absolute w-[888px] h-[789px] bg-backgoundGradient rounded-full top-[1347px] -right-32 blur-[500px] z-0"
-        >
-        </div>
-        <div
-            class="absolute w-[888px] h-[461px] bg-backgoundGradient blur-[500px] rounded-full bottom-[459px] top-[4662px] z-0 right-[276px]"
-        >
-        </div>
-        <div
-            class="absolute w-[888px] h-[461px] bg-backgoundGradient blur-[500px] rounded-full bottom-[459px] top-[4662px] z-0 right-[276px]"
-        >
-        </div>
-        <div
-            class="absolute w-[888px] h-[789px] bg-backgoundGradient blur-[500px] rounded-full top-[2845px] z-0 -right-56"
-        >
-        </div>
-        <div
-            class="absolute w-[888px] h-[789px] bg-backgoundGradient blur-[500px] rounded-full top-[3465px] z-0 -right-40"
-        >
+        <!-- Gradient Pattern wrapper -->
+        <div class="absolute inset-0 overflow-hidden -z-0">
+            <div
+                class="absolute w-[394px] h-[496px] bg-backgoundGradient rounded-full top-12 -left-16 -rotate-45 blur-[250px] z-0"
+            >
+            </div>
+            <div
+                class="absolute w-[394px] h-[496px] bg-backgoundGradient rounded-full top-48 -right-10 -rotate-45 blur-[250px] z-0"
+            >
+            </div>
+            <div
+                class="absolute w-[887px] h-[716px] bg-backgoundGradient rounded-full top-[1526px] right-1/4 opacity-50 blur-[581px] z-0"
+            >
+            </div>
+            <div
+                class="absolute w-[888px] h-[789px] bg-backgoundGradient rounded-full top-[1347px] -right-32 blur-[500px] z-0"
+            >
+            </div>
+            <div
+                class="absolute w-[888px] h-[461px] bg-backgoundGradient blur-[500px] rounded-full bottom-[459px] top-[4662px] z-0 right-[276px]"
+            >
+            </div>
+            <div
+                class="absolute w-[888px] h-[461px] bg-backgoundGradient blur-[500px] rounded-full bottom-[459px] top-[4662px] z-0 right-[276px]"
+            >
+            </div>
+            <div
+                class="absolute w-[888px] h-[789px] bg-backgoundGradient blur-[500px] rounded-full top-[2845px] z-0 -right-56"
+            >
+            </div>
+            <div
+                class="absolute w-[888px] h-[789px] bg-backgoundGradient blur-[500px] rounded-full top-[3465px] z-0 -right-40"
+            >
+            </div>
         </div>
 
         <!-- Pattern -->
-        <img
-            src="/images/asset.webp"
-            alt="asset"
-            class="top-[650px] absolute"
-        />
-        <img
-            src="/images/Pattern2.svg"
-            alt="pattern"
-            class="absolute w-full top-[5024px]"
-        />
+        <div class="absolute inset-0 overflow-hidden -z-0">
+            <img
+                src="/images/asset.webp"
+                alt="asset"
+                class="top-[650px] absolute"
+            />
+            <img
+                src="/images/Pattern2.svg"
+                alt="pattern"
+                class="absolute w-full top-[5024px]"
+            />
+        </div>
     </body>
 </html>

@@ -1,6 +1,5 @@
----
-import ArtistCardNFT from "./ArtistCardNFT.astro";
-const categoryFIlters = [
+// catogory
+export const categoryFilters = [
     "All",
     "Digital Art",
     "3D",
@@ -10,7 +9,8 @@ const categoryFIlters = [
     "Art Anime",
 ];
 
-const nfts = [
+// Data Artistnfts
+export const Artistnfts = [
     {
         imgSrc: "/images/nft4.webp",
         title: "The Purple Gazer",
@@ -48,25 +48,3 @@ const nfts = [
         currentBid: "5,12",
     },
 ];
----
-
-<section class="mx-11">
-    <h1 class="text-center text-6xl font-bold text-white mt-28">Hot Bids</h1>
-    <div>
-        <!-- Filters -->
-        <div class="flex gap-3 justify-center mt-8">
-            {
-                categoryFIlters.map((category) => (
-                    <button class="py-2 px-4 rounded-xl border-2 border-borderColor text-white">
-                        {category}
-                    </button>
-                ))
-            }
-        </div>
-
-        <!-- NFT Cards -->
-        <div class="grid grid-cols-3 gap-6 mt-11">
-            {nfts.map((nft) => <ArtistCardNFT {...nft} />)}
-        </div>
-    </div>
-</section>
