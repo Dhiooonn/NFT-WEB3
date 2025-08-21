@@ -117,4 +117,4 @@ tsconfig.json
 # Cara Menjalankan
 **1. Clone Repository**
 ```git clone https://github.com/username/astro-nft-landing.git
-cd astro-nft-landing```
+cd astro-nft-landing
