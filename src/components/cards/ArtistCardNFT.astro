@@ -10,15 +10,24 @@ const { imgSrc, title, creator, currentBid } = Astro.props;
 ---
 
 <div
-    class="p-3 bg-backgroundCard rounded-3xl text-white border-2 border-borderColor"
+    class="p-3 sm:p-4 md:p-5 bg-backgroundCard rounded-2xl md:rounded-3xl text-white border-2 border-borderColor"
 >
-    <img src={imgSrc} alt={title} />
-    <div class="information mt-7 mb-2 mx-2 flex flex-col gap-5">
+    <!-- Image -->
+    <img src={imgSrc} alt={title} class="w-full rounded-xl object-cover" />
+
+    <!-- Information -->
+    <div
+        class="information mt-5 sm:mt-6 mb-2 mx-1 sm:mx-2 flex flex-col gap-4 sm:gap-5"
+    >
         <div>
-            <h3 class="font-semibold text-2xl">{title}</h3>
-            <p class="text-sm">by {creator}</p>
+            <h3 class="font-semibold text-lg sm:text-xl md:text-2xl">
+                {title}
+            </h3>
+            <p class="text-sm md:text-base">by {creator}</p>
         </div>
+
         <div class="flex items-end justify-between">
+            <!-- Current Bid -->
             <div class="currentBid">
                 <p class="text-base">Current Bid</p>
                 <div class="flex items-center gap-1">
@@ -40,7 +49,8 @@ const { imgSrc, title, creator, currentBid } = Astro.props;
                 </div>
             </div>
 
-            <button class="py-4 px-12 bg-blue rounded-xl text-sm font-semibold"
+            <button
+                class="py-2 px-4 sm:py-3 sm:px-6 md:py-4 md:px-10 bg-blue rounded-lg md:rounded-xl text-xs sm:text-sm md:text-base font-semibold hover:opacity-90 transition"
                 >Place Bid</button
             >
         </div>

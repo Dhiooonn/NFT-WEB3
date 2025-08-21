@@ -8,15 +8,15 @@ const menu = [
 ];
 ---
 
-<header class="mt-3 mx-11">
+<header class="py-5 px-6 md:px-11 text-white relative">
     <nav class="flex justify-between items-center">
         <!-- Logo -->
         <a href="">
             <img src="/images/NebulaNFT.webp" alt="" class="h-5 w-auto" />
         </a>
 
-        <!-- Menu -->
-        <ul class="flex gap-12">
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex gap-12">
             {
                 menu.map((item) => (
                     <li>
@@ -28,8 +28,8 @@ const menu = [
             }
         </ul>
 
-        <!-- Buttons -->
-        <div class="text-white flex gap-9 items-center">
+        <!-- Buttons Desktop -->
+        <div class="hidden text-white md:flex gap-9 items-center">
             <a href="#" class="text-xl">LogIn</a>
             <a
                 href="#"
@@ -37,5 +37,48 @@ const menu = [
                 >Get Started</a
             >
         </div>
+
+        <!-- Mobile Humberger -->
+        <button
+            id="menu-btn"
+            class="md:hidden flex flex-col gap-1.5 focus:outline-none"
+            aria-label="Toggle Menu"
+        >
+            <span class="w-6 h-0.5 bg-white"></span>
+            <span class="w-6 h-0.5 bg-white"></span>
+            <span class="w-6 h-0.5 bg-white"></span>
+        </button>
     </nav>
+
+    <!-- Mobile Menu -->
+    <div
+        id="mobile-menu"
+        class="hidden absolute top-full left-0 w-full flex flex-col items-center gap-6 py-6 md:hidden
+         bg-glass-dark backdrop-blur-md border border-glass-dark rounded-xl shadow-glass"
+    >
+        <ul class="flex flex-col gap-6">
+            {
+                menu.map((item) => (
+                    <li>
+                        <a href={item.href} class="text-xl glitch-hover">
+                            {item.name}  
+                        </a>
+                    </li>
+                ))
+            }
+        </ul>
+
+        <div class="flex flex-col gap-4 mt-4">
+            <a href="#" class="text-xl text-center">LogIn</a>
+            <a
+                href="#"
+                class="text-lg font-semibold py-2 px-6 rounded-lg bg-blue shadow-blueGlow text-center"
+            >
+                Get Started
+            </a>
+        </div>
+    </div>
 </header>
+
+<!-- Load TS -->
+<script src="../../scripts/Navbar.ts"></script>
