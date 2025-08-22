@@ -12,37 +12,37 @@ export const categoryFilters = [
 // Data Artistnfts
 export const Artistnfts = [
     {
-        imgSrc: "/images/nft4.webp",
+        imgSrc: "/images/artist/seller2.webp",
         title: "The Purple Gazer",
         creator: "Arlo Vance",
         currentBid: "5,12",
     },
     {
-        imgSrc: "/images/nft4.webp",
+        imgSrc: "/images/artist/seller3.webp",
         title: "The Purple Gazer",
         creator: "Arlo Vance",
         currentBid: "5,12",
     },
     {
-        imgSrc: "/images/nft4.webp",
+        imgSrc: "/images/artist/seller4.webp",
         title: "The Purple Gazer",
         creator: "Arlo Vance",
         currentBid: "5,12",
     },
     {
-        imgSrc: "/images/nft4.webp",
+        imgSrc: "/images/artist/seller5.webp",
         title: "The Purple Gazer",
         creator: "Arlo Vance",
         currentBid: "5,12",
     },
     {
-        imgSrc: "/images/nft4.webp",
+        imgSrc: "/images/artist/seller6.webp",
         title: "The Purple Gazer",
         creator: "Arlo Vance",
         currentBid: "5,12",
     },
     {
-        imgSrc: "/images/nft4.webp",
+        imgSrc: "/images/artist/seller7.webp",
         title: "The Purple Gazer",
         creator: "Arlo Vance",
         currentBid: "5,12",
