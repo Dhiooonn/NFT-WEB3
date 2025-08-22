@@ -46,20 +46,20 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 # Astro NFT Landing Page
 Proyek ini adalah landing page bertema NFT yang dibuat menggunakan Astro dengan struktur komponen modular dan section yang dapat diakses melalui navigasi di navbar.
 
-# Fitur
+# 🚀 Fitur
 - **Desain Responsif** – Tampilan optimal di desktop, tablet, dan mobile.
 - **Navigasi Smooth Scroll** – Klik menu di navbar langsung menuju ke section yang dituju.
 - **Modular Components** – Setiap section dipisahkan dalam file .astro untuk memudahkan pengelolaan.
 - **Optimasi Performa** – Menggunakan kemampuan Astro untuk meminimalkan beban render.
 - **Asset Lokal** – Gambar dan aset disimpan di folder /public.
 
-# Teknologi yang Digunakan
+# 🛠️ Teknologi yang Digunakan
 - **Astro – Static** site generator modern
 - **Tailwind CSS** – Styling cepat dan konsisten
 - **TypeScript** – Menjaga kode lebih aman
 - **HTML5 & CSS3**
 
-# Struktur Folder
+# 📂 Struktur Folder
 ```
 public/                # Asset publik (gambar, icon, dll)
  └─ images/
@@ -117,6 +117,7 @@ tsconfig.json
 
 # Cara Menjalankan
 **1. Clone Repository**
+
 ``git clone https://github.com/username/astro-nft-landing.git
 cd astro-nft-landing```
 
