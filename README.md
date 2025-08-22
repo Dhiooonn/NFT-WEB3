@@ -121,14 +121,18 @@ tsconfig.json
 ```git clone https://github.com/username/astro-nft-landing.git
 cd astro-nft-landing```
 
+
 **2. Install Dependencies**
 ```npm install```
+
 
 **3. Jalankan Development Server**
 ```npm run dev```
 
+
 **4. Build untuk Production**
 ```npm run build```
+
 
 **5. Install Dependencies**
 ```npm run preview```
