@@ -2,29 +2,32 @@
 import TopSellerAnimation from "../components/animation/TopSellerAnimation";
 import SellerCard from "../components/cards/SellerCard.astro";
 import { sellers } from "../data/Sellers.ts";
+import FadeIn from "../components/animation/FadeIn";
 ---
 
-<section id="activity" class="mt-28 flex flex-col gap-12">
-    <h1
-        class="text-white font-bold text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
-    >
-        Top Seller
-    </h1>
+<FadeIn client:load delay={0.3}>
+    <section id="activity" class="mt-28 flex flex-col gap-12">
+        <h1
+            class="text-white font-bold text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
+        >
+            Top Seller
+        </h1>
 
-    <div class="flex flex-col gap-6 overflow-hidden">
-        {
-            Array.from({ length: 3 }).map((_, rowIndex) => (
-                <div class="topSellerRow flex gap-6">
-                    {sellers.map((seller) => (
-                        <SellerCard {...seller} />
-                    ))}
-                    {sellers.map((seller) => (
-                        <SellerCard {...seller} />
-                    ))}
-                </div>
-            ))
-        }
-    </div>
+        <div class="flex flex-col gap-6 overflow-hidden">
+            {
+                Array.from({ length: 3 }).map((_, rowIndex) => (
+                    <div class="topSellerRow flex gap-6">
+                        {sellers.map((seller) => (
+                            <SellerCard {...seller} />
+                        ))}
+                        {sellers.map((seller) => (
+                            <SellerCard {...seller} />
+                        ))}
+                    </div>
+                ))
+            }
+        </div>
 
-    <TopSellerAnimation client:load />
-</section>
+        <TopSellerAnimation client:load />
+    </section>
+</FadeIn>
